@@ -1,0 +1,6 @@
+# U-Boot is writen by wic_odroid_fixup class
+part / --source rootfs --ondisk mmcblk --fstype=ext4 --label system_a  --align 8192 --extra-space 200
+part / --source rootfs --ondisk mmcblk --fstype=ext4 --label system_b  --align 8192 --extra-space 200
+part /data --ondisk mmcblk --fstype=ext4 --label data --size 16M --align 8192 --extra-space 0
+
+bootloader --ptable msdos
